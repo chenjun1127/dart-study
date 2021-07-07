@@ -7,3 +7,7 @@ class ListDemo {
     });
   }
 }
+
+void main() {
+  ListDemo().printList();
+}
