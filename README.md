@@ -1,6 +1,6 @@
 ```bash
 cd /bin
-dart main.dart
+dart xx.dart
 ```
 
 A simple command-line application.
