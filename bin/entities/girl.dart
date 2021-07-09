@@ -1,25 +1,18 @@
-class Girl {
-  int age = 20;
-  String name = "Lucy";
-  String address = "";
+import 'person.dart';
 
-  // 默认构造函数
-  Girl(this.age, this.name, this.address);
-
-  // 无参构造函数，使用命名
-  Girl.noArgs();
-
-  // 命名构造函数
-  Girl.origin(this.age, this.name, this.address) {
-    age = age;
-    name = name;
-    address = address;
+class Girl extends Person {
+  late String birthday; // 延迟初始化
+  late String hobbies;
+  late String sex;
+  Girl(String sex, String birthday, String hobbies, int age, String name,
+      String address)
+      : super(age, name, address) {
+    this.sex = sex;
+    this.birthday = birthday;
+    this.hobbies = hobbies;
   }
-
-  @override
-  String toString() {
-    return 'Girl{age: $age, name: $name, address: $address}';
+  void printInfo(String sex, String birthday, String hobbies) {
+    String s = super.getUserInfo(sex, birthday, hobbies);
+    print(s);
   }
-
-  String get info => "Girl{age: $age, name: $name, address: $address}";
 }
