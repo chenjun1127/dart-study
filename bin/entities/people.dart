@@ -28,6 +28,7 @@ class Student extends People {
 }
 
 void main() {
+  print("-------继承-----");
   Student student = new Student();
   student.age = 30;
   student.name = "Lucy";
@@ -39,4 +40,13 @@ void main() {
   student.printin();
   student.study();
   student.run();
+  print("-------多态-----");
+  People people = new Student();
+  people.name = "lucy";
+  people.printin();
+  // people.study(); 这里无法访问到子类的方法，因为使用多态生成的对象是 People, People 中没有study方法
+  // 使用 is 表示将 people 转换为了 Student，下面就可以访问了
+  if (people is Student) {
+    people.study();
+  }
 }
