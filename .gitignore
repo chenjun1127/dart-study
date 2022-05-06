@@ -10,5 +10,4 @@ doc/api/
 .iml
 .idea
 *.iml
-*.DS_Store
-/*/.DS_Store
+.DS_Store
